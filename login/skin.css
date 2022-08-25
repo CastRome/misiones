@@ -1,0 +1,80 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  background: #ffffff;
+  padding: 0px ;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #999;
+  height:400px;
+}
+
+.item {
+  border-radius:10px;
+  border: solid #aaaaaa 2px;
+  background: #ffffff;
+  color: black;
+  text-align: center;
+  width: 200px;
+  margin-top: 20px;
+  padding: 0px 10px ;
+}
+
+p {
+   margin:10px 5px;
+  height: 20px;
+   width:100%;
+  margin-bottom:0px;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  text-align: left;
+
+}
+#title{
+  text-align:left;
+  font-weight: bold;
+  font-size: 2rem;
+  height: 40px;
+  margin:5px;
+  width:auto;
+}
+
+button{
+  font-weight: bold;
+  height:35px; 
+  width:100%;
+  background-color:blue;
+  color: white;
+  border-radius:15px;
+  /*padding: 0px;*/
+  margin-top: 15px;
+  border: solid black 1px
+}
+input {
+   width:80%;
+  vertical-align:middle;
+  height:25px; 
+  background-color: white;
+  border-radius: 5px;
+  background-position: 10px;
+    background-size: 12px;
+  background-repeat: no-repeat;
+  padding-left:30px;
+  margin-top: 15px;
+}
+input[type=password] {
+  margin-top: 10px;
+  background-image: url('https://icons-for-free.com/iconfiles/png/512/lock-1320568686583880933.png');
+}
+
+input[type=email] {
+   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/At-teken.png/50px-At-teken.png');
+}
+::placeholder {
+  color: dark gray;
+  
+}
+
+ 
+  
