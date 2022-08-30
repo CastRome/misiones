@@ -1,18 +1,14 @@
 {
-  "name": "nodejs",
+  "name": "robot.test",
   "version": "1.0.0",
-  "description": "",
+  "description": "mision de prueba de jest",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "Ruben Castilla",
+  "author": "Jhon y Ruben",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.0.1"
-  },
-  "dependencies": {
-    "casual": "^1.6.2"
   }
 }
