@@ -42,72 +42,72 @@ $ npm test
 // const 
 exports.createRobot = (a, b) => {
     let x = a
-    let y  = b
+    let y = b
     let direction = "N"
-  
-        
+
+
     function turnRight() {
 
-            if (direction === "N") {
-                direction = "E";
-            } else if (direction === "E") {
-                direction = "S";
-            } else if (direction === "S") {
-                direction = "W";
-            } else if (direction === "W") {
-                direction = "N";
-            }
-            return `new direction = ${direction}`
-        };
-        function   turnLeft() {
-            if (direction === "N") {
-                direction = "W";
-            } else if (direction === "W") {
-                direction = "S";
-            } else if (direction === "S") {
-                direction = "E";
-            } else if (direction === "E") {
-                direction = "N";
-            }
-            return `new direction = ${direction}`
-        };
-        function  advance() {
+        if (direction === "N") {
+            direction = "E";
+        } else if (direction === "E") {
+            direction = "S";
+        } else if (direction === "S") {
+            direction = "W";
+        } else if (direction === "W") {
+            direction = "N";
+        }
+        return `new direction = ${direction}`
+    };
+    function turnLeft() {
+        if (direction === "N") {
+            direction = "W";
+        } else if (direction === "W") {
+            direction = "S";
+        } else if (direction === "S") {
+            direction = "E";
+        } else if (direction === "E") {
+            direction = "N";
+        }
+        return `new direction = ${direction}`
+    };
+    function advance() {
 
-            if (direction === "N") {
-                if(y+1>=10 ){ return "error y direccion > 10" }else{ y=y+1;  return y}
-            } else if (direction === "E") {
-                if(x+1>=10 ){ return "error x direccion > 10" }else{ x=x+1;  return x}
-            } else if (direction === "S") {
-                if(y-1<0 ){ return "error y direccion > 10" }else{ y=y-1;  return y}
-            } else if (direction === "W") {
-                if(x-1<10 ){ return "error x direccion > 10" }else{ x=x-1;  return x}
-            }
-        };
-        function  location() {
-           return `x = ${x}, y = ${y}, direction = ${direction}`
-        };
-        function   getX(){
-           return x
-        };
-        function   getY(){
-            return y
-        };
-        function instructions(instuc){
-                
-            instuc.split("").map((item)=>{
-                if(item==="L"){
-                    turnLeft();   
-                }else if(item==="R"){
-                    turnRight();   
-                }else if(item==="A"){
-                    advance();   
-                }else{  throw new Error("Error de comando");}
-                
-            })
+        if (direction === "N") {
+            if (y + 1 >= 10) { return "error y direccion > 10" } else { y = y + 1; return y }
+        } else if (direction === "E") {
+            if (x + 1 >= 10) { return "error x direccion > 10" } else { x = x + 1; return x }
+        } else if (direction === "S") {
+            if (y - 1 < 0) { return "error y direccion > 10" } else { y = y - 1; return y }
+        } else if (direction === "W") {
+            if (x - 1 < 10) { return "error x direccion > 10" } else { x = x - 1; return x }
         }
-        return {
-            turnRight,turnLeft,advance,location,getX,getY,instructions
-        }
+    };
+    function location() {
+        return `x = ${x}, y = ${y}, direction = ${direction}`
+    };
+    function getX() {
+        return x
+    };
+    function getY() {
+        return y
+    };
+    function instructions(instuc) {
+
+        instuc.split("").map((item) => {
+            if (item === "L") {
+                turnLeft();
+            } else if (item === "R") {
+                turnRight();
+            } else if (item === "A") {
+                advance();
+            } else { throw new Error("Error de comando"); }
+
+        })
+    }
+    return {
+        turnRight, turnLeft, advance, location, getX, getY, instructions
+    }
 };
 /*
 let roboto = createRobot(10, 10);
