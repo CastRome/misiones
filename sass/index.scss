@@ -1,0 +1,112 @@
+$color: #999;
+$googleFont: "Roboto";
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bodyContainer {
+    width: 350px;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #494;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px gray;
+    padding: 10px;
+
+    .item-logo {
+        width: 110px;
+        height: 80px;
+    }
+    
+    .item-info {
+        display: flex;
+        flex-flow: row wrap;
+        margin-left: 10px;
+
+        .item-name {
+            width: 100%;
+            font-weight: 850;
+            color: #555;
+            font-size: 20px;
+        }
+
+
+        .item-stars {
+            width: 40%;
+            height: 15px
+        }
+
+        .item-score {
+            width: 50%;
+            font-size: 14px;
+        }
+
+        .item-location {
+            width: 100%;
+            background-image: url("https://brandeps.com/icon-download/L/Location-on-icon-vector-01.svg");
+            background-repeat: no-repeat;
+            padding-left: 19px;
+            background-size: 18px;
+        }
+
+    }
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+
+    svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .footer-add {
+        position: absolute;
+        left: 43%;
+        bottom: 10px;
+        border: 1px gray solid;
+        border-radius: 1000px;
+        background-color: white;
+        width: 50px;
+        height: 50px;
+    }
+
+    button {
+        border: none;
+
+    }
+}
+
+.footer {
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-around;
+}
+
+//
+p {
+    color: $color;
+    font-family: $googleFont;
+    margin: 0;
+}
